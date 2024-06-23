@@ -17,7 +17,11 @@ function MyNavbar() {
         <Navbar.Brand className="navEle" href="#home">
           <img className="logo" src={logo} />
         </Navbar.Brand>
-        <InputGroup className="mb-3 searchInputGroup">
+        
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto navItems">
+          <InputGroup className="mb-3 searchInputGroup">
           <Form.Control className="searchB" placeholder="Search..." />
           <Button
             className="search-button"
@@ -27,9 +31,6 @@ function MyNavbar() {
             🔍
           </Button>
         </InputGroup>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto navItems">
             <NavDropdown
               className="navEleR"
               title={
@@ -79,7 +80,7 @@ function MyNavbar() {
             <Nav.Link className="navEleR" href="#kart">
               <img className="dropImg" src={kart} />
             </Nav.Link>
-            <Button variant="outline-primary" className="signIn">Sign In</Button>{' '}
+            <Button variant="outline-primary" className="signIn">SignIn</Button>{' '}
           </Nav>
         </Navbar.Collapse>
     </Navbar>
